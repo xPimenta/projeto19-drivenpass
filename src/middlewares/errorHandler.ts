@@ -6,6 +6,7 @@ const errors = {
   "unprocessable": 422,
   "WifiAlreadyExists": 409,
   "NotFound": 404,
+  "NoteAlreadyExists": 409,
 }
 
 export function errorHandler( err, _req: Request, res: Response, _next: NextFunction ) {
