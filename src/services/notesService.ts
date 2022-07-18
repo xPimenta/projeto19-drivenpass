@@ -11,7 +11,7 @@ export async function create(note: Notes) {
   const noteExists = await notesRepository.searchByTitleAndUserId(title, userId);
 
   if (noteExists)
-    throw { type: "NoteAlreadyExists", message: "There is already a note registered with this title." };
+    throw { type: "conflict", message: "There is already a note registered with this title." };
 
   await notesRepository.create(note);
 }
