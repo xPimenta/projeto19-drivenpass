@@ -13,7 +13,7 @@ wifiRouter.post('/wifi',
   controller.create
 );
 
-wifiRouter.get('/wifis/:userId',
+wifiRouter.get('/wifi',
   middleware.validateJWT,
   controller.getWifisUser
 );

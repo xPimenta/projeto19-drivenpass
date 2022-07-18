@@ -27,3 +27,7 @@ export async function login(user: userData){
 
   return { token };
 }
+
+export async function countAll(userId: number){
+  return await userRepository.countAll(userId);
+}

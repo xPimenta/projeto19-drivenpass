@@ -13,8 +13,7 @@ cardsRouter.post("/cards",
   controller.create
 );
 
-cardsRouter.get(
-  "/cards/:id",
+cardsRouter.get( "/cards",
   middleware.validateJWT,
   controller.getCardsUser
 );
@@ -24,8 +23,7 @@ cardsRouter.get("/card/:id",
   controller.getCard
 );
 
-cardsRouter.delete(
-  "/cards/:id",
+cardsRouter.delete("/cards/:id",
   middleware.validateJWT,
   controller.deleteCard
 );

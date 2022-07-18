@@ -17,8 +17,8 @@ model User {
   notes       Notes[]
   wifi        Wifi[]
   credentials Credentials[]
+  documents   Documents[]
   createdAt   DateTime      @default(now())
-
 
   @@map("users")
 }
@@ -64,7 +64,20 @@ model Cards {
   password  String
   isVirtual Boolean  @default(false)
   type      CardType
+  createdAt DateTime @default(now())
+}
 
+model Documents {
+  id          Int          @id @default(autoincrement())
+  userId      Int
+  fullname    String
+  dateEmitted DateTime
+  dateExpires DateTime
+  numberRef   String
+  institution String
+  type        DocumentType
+  user        User         @relation(fields: [userId], references: [id])
+  createdAt   DateTime     @default(now())
 }
 
 enum CardType {
@@ -72,3 +85,10 @@ enum CardType {
   DEBIT
   HYBRID
 }
+
+enum DocumentType {
+  NATIONAL_ID
+  DRIVING_LICENSE
+}
+
+
