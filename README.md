@@ -2,7 +2,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <img src="https://icon-library.com/images/lock-icon-png/lock-icon-png-16.jpg" alt="Logo" width="170">
+    <img src="https://i.pinimg.com/736x/89/d0/a7/89d0a732359dee26a70718cf48736c47.jpg" alt="Logo" width="170">
 
 <h3 align="center">Driven-Pass API</h3>
   <p align="center">
