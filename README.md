@@ -229,4 +229,8 @@ DELETE /documents/:ID
     - headers: { "Authorization": "Bearer $token" }
     - body: {}
 ```
+<<<<<<< HEAD
 ***   
+=======
+***   
+>>>>>>> c8c71647d80269cbe3df7af773640942e1a5cc4b
