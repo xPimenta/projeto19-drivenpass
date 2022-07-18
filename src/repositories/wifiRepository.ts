@@ -23,3 +23,19 @@ export async function getWifisUser(userId: number) {
     }
   });
 }
+
+export async function getWifi(wifiId: number) {
+  return prisma.wifi.findFirst({
+    where: {
+      id: wifiId
+    }
+  });
+}
+
+export async function deleteWifi(wifiId: number, userId: number) {
+  return prisma.wifi.delete({
+    where: {
+      id: wifiId,
+    }
+  });
+}

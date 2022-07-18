@@ -1,5 +1,6 @@
 import { Router } from "express";
 
+import * as middleware from "../middlewares/validateJWT.js";
 import * as controller from "../controllers/wifiController.js";
 
 import { wifiSchema } from './../schemas/wifiSchemas.js';
@@ -12,8 +13,19 @@ wifiRouter.post('/wifi',
   controller.create
 );
 
-wifiRouter.get('/wifi/:userId', controller.getWifisUser);
+wifiRouter.get('/wifis/:userId',
+  middleware.validateJWT,
+  controller.getWifisUser
+);
 
-wifiRouter.delete('/wifi');
+wifiRouter.get('/wifi/:wifiId',
+  middleware.validateJWT,
+  controller.getWifi
+)
+
+wifiRouter.delete('/wifi/:wifiId',
+  middleware.validateJWT,
+  controller.deleteWifi
+);
 
 export default wifiRouter;
