@@ -3,9 +3,7 @@ import { Request, Response } from "express";
 import * as userService from "../services/userService.js";
 
 export async function signup(req: Request, res: Response) {
-  const { email, password } = req.body;
-
-  await userService.create({ email, password });
+  await userService.create(req.body);
   res.sendStatus(201);
 }
 

@@ -27,4 +27,3 @@ export async function login(user: userData){
 
   return { token };
 }
-
