@@ -2,7 +2,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <img src="https://mpng.subpng.com/20191227/yjt/transparent-lock-icon-law-and-justice-icon-5e05d35561e5f7.584139731577440085401.jpg" alt="Logo" width="170">
+    <img src="https://icon-library.com/images/lock-icon-png/lock-icon-png-16.jpg" alt="Logo" width="170">
 
 <h3 align="center">Driven-Pass API</h3>
   <p align="center">
