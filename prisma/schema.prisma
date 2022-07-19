@@ -90,5 +90,3 @@ enum DocumentType {
   NATIONAL_ID
   DRIVING_LICENSE
 }
-
-
