@@ -1,5 +1,6 @@
 import jwt from 'jsonwebtoken';
 import { User } from '@prisma/client';
+import dotenv from 'dotenv';
 
 import * as passUtils from '../utils/passUtils.js';
 import * as userRepository from '../repositories/userRepository.js';
@@ -23,7 +24,8 @@ export async function login(user: userData){
   if(!userExists || !isValid) throw { type: "unauthorized", message: "Invalid credentials. Try again." };
 
   const data = { id: userExists.id, email: userExists.email };
-  const token = jwt.sign( data, process.env.JWT_SECRET);
+  const token = jwt.sign(data, process.env.JWT_SECRET);
+  console.log(token)
 
   return { token };
 }
